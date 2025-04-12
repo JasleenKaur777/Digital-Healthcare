@@ -12,7 +12,7 @@ public class MediCureApplication {
 		SpringApplication.run(MediCureApplication.class, args);
 	}
 	@Bean
-	public ModelMapper modelmapper() {
+	 ModelMapper modelmapper() {
 		return new ModelMapper();
 	}
 

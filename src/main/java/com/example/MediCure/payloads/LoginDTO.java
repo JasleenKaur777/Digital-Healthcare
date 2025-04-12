@@ -1,16 +1,16 @@
-package com.example.MediCure.model;
+package com.example.MediCure.payloads;
 
-public class LoginUser {
+public class LoginDTO {
 private String username;
 private String password;
-public LoginUser() {
-	super();
-	// TODO Auto-generated constructor stub
-}
-public LoginUser(String username, String password) {
+public LoginDTO(String username, String password) {
 	super();
 	this.username = username;
 	this.password = password;
+}
+public LoginDTO() {
+	super();
+	// TODO Auto-generated constructor stub
 }
 public String getUsername() {
 	return username;

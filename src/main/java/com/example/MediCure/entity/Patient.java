@@ -23,7 +23,6 @@ private String medicalhistory;
 private Date registerationDate;
 public Patient() {
 	super();
-	// TODO Auto-generated constructor stub
 }
 
 public Patient(Integer id, Integer age, String gender, String address, Long phoneNumber, String email,

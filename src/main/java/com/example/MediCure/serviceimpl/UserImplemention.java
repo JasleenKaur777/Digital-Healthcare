@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import com.example.MediCure.dao.UserRepository;
 import com.example.MediCure.entity.User;
 import com.example.MediCure.exception.ResourceNotFoundException;
+import com.example.MediCure.payloads.LoginDTO;
 import com.example.MediCure.payloads.UserDTO;
 import com.example.MediCure.service.UserService;
 
@@ -67,6 +68,47 @@ public class UserImplemention implements UserService {
 	public UserDTO getUser(Integer id) {
 		User user= repo.findById(id).orElseThrow(()->new ResourceNotFoundException("User","UserId",id));
 		return mapper.map(user, UserDTO.class);
+	}
+
+	@Override
+	public LoginDTO loginUser(LoginDTO dto) {
+		User user= repo.findByUsername(dto.getUsername());
+		if(user!=null) {
+			if(user.getPassword().equals(dto.getPassword())) {
+				LoginDTO login=new LoginDTO();
+				login.setUsername(user.getUsername());
+				String str="";
+				int len=user.getPassword().length();
+				for (int i = 0; i < len; i++) {
+					str+='*';
+				}
+				login.setPassword(str);
+				return mapper.map(login, LoginDTO.class);
+			}
+			else {
+				
+				 throw new IllegalArgumentException("Invalid password");
+				
+				 
+			}
+		}
+		else {
+			 throw new IllegalArgumentException("Invalid username and password");
+		}
+		
+	}
+
+	@Override
+	public List<UserDTO> getUserByRole(String role) {
+		List<User> user=repo.findByRole(role);
+		if(user.isEmpty()) {
+			throw new IllegalArgumentException("Invalid role");
+		}
+		else {
+			List<UserDTO> dtos=	user.stream().map(dto->mapper.map(dto, UserDTO.class)).collect(Collectors.toList());
+			return dtos;
+		}
+		
 	}
 
 }

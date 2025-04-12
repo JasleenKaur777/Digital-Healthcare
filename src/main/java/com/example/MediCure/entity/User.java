@@ -1,10 +1,14 @@
 package com.example.MediCure.entity;
 
+import com.example.MediCure.payloads.DoctorDTO;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToOne;
 
 @Entity
 public class User {
@@ -18,9 +22,22 @@ public class User {
 	private String password;
 	private String role;
 
+	@OneToOne
+	@JoinColumn(name="doctor_id")
+	private Doctor doctor;
 	public User() {
 		super();
 		// TODO Auto-generated constructor stub
+	}
+
+	public User(Integer id, String username, String email, String password, String role, Doctor doctor) {
+		super();
+		this.id = id;
+		this.username = username;
+		this.email = email;
+		this.password = password;
+		this.role = role;
+		this.doctor = doctor;
 	}
 
 	public User(Integer id, String username, String email, String password, String role) {
@@ -30,6 +47,14 @@ public class User {
 		this.email = email;
 		this.password = password;
 		this.role = role;
+	}
+
+	public Doctor getDoctor() {
+		return doctor;
+	}
+
+	public void setDoctor(Doctor doctor) {
+		this.doctor = doctor;
 	}
 
 	public Integer getId() {
