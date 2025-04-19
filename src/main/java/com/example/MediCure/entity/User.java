@@ -25,6 +25,8 @@ public class User {
 	@OneToOne
 	@JoinColumn(name="doctor_id")
 	private Doctor doctor;
+	
+	
 	public User() {
 		super();
 		// TODO Auto-generated constructor stub
