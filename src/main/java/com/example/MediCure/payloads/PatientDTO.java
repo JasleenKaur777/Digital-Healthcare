@@ -3,7 +3,10 @@ package com.example.MediCure.payloads;
 import jakarta.validation.constraints.NotBlank;
 
 public class PatientDTO {
+<<<<<<< HEAD
 	private Integer id;
+=======
+>>>>>>> 8a51cf9a6b60acb256e48f237ec6c9461f440a35
 	 @NotBlank(message = "Age is required")
 	private Integer age;
 	private String gender;
@@ -63,11 +66,14 @@ public class PatientDTO {
 	public void setUser(UserDTO user) {
 		this.user = user;
 	}
+<<<<<<< HEAD
 	public Integer getId() {
 		return id;
 	}
 	public void setId(Integer id) {
 		this.id = id;
 	}
+=======
+>>>>>>> 8a51cf9a6b60acb256e48f237ec6c9461f440a35
 	
 }

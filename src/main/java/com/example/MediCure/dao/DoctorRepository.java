@@ -10,5 +10,8 @@ import java.util.List;
 @Repository
 public interface DoctorRepository extends JpaRepository<Doctor, Integer> {
 List<Doctor> findBySpecialization(String specialization);
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8a51cf9a6b60acb256e48f237ec6c9461f440a35
 }

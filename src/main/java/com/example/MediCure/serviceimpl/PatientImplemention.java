@@ -1,9 +1,12 @@
 package com.example.MediCure.serviceimpl;
 
 
+<<<<<<< HEAD
 import java.util.List;
 import java.util.stream.Collectors;
 
+=======
+>>>>>>> 8a51cf9a6b60acb256e48f237ec6c9461f440a35
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -51,6 +54,7 @@ public class PatientImplemention implements PatientService {
 		
 	}
 
+<<<<<<< HEAD
 	@Override
 	public List<PatientDTO> getAllPatient() {
 	List<Patient> patients=	patient_repo.findAll();
@@ -91,4 +95,6 @@ public class PatientImplemention implements PatientService {
 		
 	}
 
+=======
+>>>>>>> 8a51cf9a6b60acb256e48f237ec6c9461f440a35
 }

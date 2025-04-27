@@ -16,7 +16,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.MediCure.payloads.DoctorDTO;
+<<<<<<< HEAD
 import com.example.MediCure.payloads.PatientDTO;
+=======
+>>>>>>> 8a51cf9a6b60acb256e48f237ec6c9461f440a35
 import com.example.MediCure.payloads.ResponseMsg;
 import com.example.MediCure.serviceimpl.DoctorImplemention;
 
@@ -64,6 +67,7 @@ public class DoctorController {
 		List<DoctorDTO> doctordtos= service.getDoctorBySpecialization(specialization);
 		return new ResponseEntity<List<DoctorDTO>>(doctordtos,HttpStatus.ACCEPTED);
 	}
+<<<<<<< HEAD
 	@PostMapping("/add-patient")
 	public ResponseEntity<DoctorDTO> insertPatients(@RequestParam Integer doctor_id,@RequestParam Integer patient_id,@RequestParam String specialization) {
 		DoctorDTO dto=service.insertPatients(doctor_id, patient_id, specialization);
@@ -74,4 +78,6 @@ public class DoctorController {
         List<PatientDTO> patients = service.getPatientsByDoctorId(doctorId);
         return ResponseEntity.ok(patients);
     }
+=======
+>>>>>>> 8a51cf9a6b60acb256e48f237ec6c9461f440a35
 }
