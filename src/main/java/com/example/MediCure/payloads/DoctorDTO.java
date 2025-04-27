@@ -1,11 +1,6 @@
 package com.example.MediCure.payloads;
-
-<<<<<<< HEAD
 import java.util.ArrayList;
 import java.util.List;
-
-=======
->>>>>>> 8a51cf9a6b60acb256e48f237ec6c9461f440a35
 public class DoctorDTO {
 	private Integer id;
 	
@@ -13,10 +8,7 @@ public class DoctorDTO {
     private String phone;
    
     private UserDTO user;
-<<<<<<< HEAD
     private List<PatientDTO> patients=new ArrayList<PatientDTO>();
-=======
->>>>>>> 8a51cf9a6b60acb256e48f237ec6c9461f440a35
    
 	public DoctorDTO() {
 		super();
@@ -31,9 +23,7 @@ public class DoctorDTO {
 		
 	}
 
-	
 
-<<<<<<< HEAD
 	public DoctorDTO(Integer id, String specialization, String phone, UserDTO user, List<PatientDTO> patients) {
 		super();
 		this.id = id;
@@ -51,8 +41,6 @@ public class DoctorDTO {
 		this.patients = patients;
 	}
 
-=======
->>>>>>> 8a51cf9a6b60acb256e48f237ec6c9461f440a35
 	public Integer getId() {
 		return id;
 	}

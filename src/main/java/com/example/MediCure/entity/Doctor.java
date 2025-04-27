@@ -1,6 +1,5 @@
 package com.example.MediCure.entity;
 
-<<<<<<< HEAD
 
 
 import java.util.List;
@@ -9,20 +8,11 @@ import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
-=======
-import com.example.MediCure.payloads.UserDTO;
-
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
->>>>>>> 8a51cf9a6b60acb256e48f237ec6c9461f440a35
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
-<<<<<<< HEAD
 import jakarta.persistence.OneToMany;
-=======
->>>>>>> 8a51cf9a6b60acb256e48f237ec6c9461f440a35
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 
@@ -44,12 +34,11 @@ public class Doctor {
     @JoinColumn(name="user_id")
     private User user;
     
-<<<<<<< HEAD
+
     @OneToMany(cascade = CascadeType.ALL,fetch = FetchType.EAGER,mappedBy = "doctor")
     private List<Patient> patients;
     
-=======
->>>>>>> 8a51cf9a6b60acb256e48f237ec6c9461f440a35
+
     public Doctor() {}
 
     public Doctor(Integer id, String name, String specialization, String phone, String email, User user) {
@@ -71,7 +60,7 @@ public class Doctor {
     }
 
     
-<<<<<<< HEAD
+
     public Doctor(Integer id, String name, String specialization, String phone, String email, User user,
 			List<Patient> patients) {
 		super();
@@ -92,10 +81,7 @@ public class Doctor {
 		this.patients = patients;
 	}
 
-	public User getUser() {
-=======
     public User getUser() {
->>>>>>> 8a51cf9a6b60acb256e48f237ec6c9461f440a35
 		return user;
 	}
 

@@ -1,11 +1,9 @@
 package com.example.MediCure.entity;
 
-import com.example.MediCure.payloads.DoctorDTO;
 
-<<<<<<< HEAD
+
 import jakarta.persistence.CascadeType;
-=======
->>>>>>> 8a51cf9a6b60acb256e48f237ec6c9461f440a35
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -25,20 +23,11 @@ public class User {
 	private String email;
 	private String password;
 	private String role;
-
-<<<<<<< HEAD
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name="doctor_id")
 	private Doctor doctor;
-	
 
-=======
-	@OneToOne
-	@JoinColumn(name="doctor_id")
-	private Doctor doctor;
-	
-	
->>>>>>> 8a51cf9a6b60acb256e48f237ec6c9461f440a35
+
 	public User() {
 		super();
 		// TODO Auto-generated constructor stub

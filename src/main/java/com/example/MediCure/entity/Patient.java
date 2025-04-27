@@ -1,20 +1,16 @@
 package com.example.MediCure.entity;
 
-import java.util.Date;
 
-<<<<<<< HEAD
+
 import jakarta.persistence.CascadeType;
-=======
->>>>>>> 8a51cf9a6b60acb256e48f237ec6c9461f440a35
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
-<<<<<<< HEAD
+
 import jakarta.persistence.ManyToOne;
-=======
->>>>>>> 8a51cf9a6b60acb256e48f237ec6c9461f440a35
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 
@@ -29,8 +25,6 @@ private String gender;
 private String address;
 private Long phoneNumber;
 private String medicalhistory;
-
-<<<<<<< HEAD
 @OneToOne(cascade = CascadeType.ALL)
 @JoinColumn(name="user_id")
 private User user;
@@ -38,12 +32,6 @@ private User user;
 @ManyToOne(cascade = CascadeType.ALL)
 private Doctor doctor;
 
-=======
-@OneToOne
-@JoinColumn(name="user_id")
-private User user;
-
->>>>>>> 8a51cf9a6b60acb256e48f237ec6c9461f440a35
 public Patient() {
 	super();
 	// TODO Auto-generated constructor stub
@@ -61,7 +49,7 @@ public Patient(Integer id, Integer age, String gender, String address, Long phon
 	this.user = user;
 }
 
-<<<<<<< HEAD
+
 
 public Patient(Integer id, Integer age, String gender, String address, Long phoneNumber, String medicalhistory,
 		User user, Doctor doctor) {
@@ -84,8 +72,6 @@ public void setDoctor(Doctor doctor) {
 	this.doctor = doctor;
 }
 
-=======
->>>>>>> 8a51cf9a6b60acb256e48f237ec6c9461f440a35
 public Integer getId() {
 	return id;
 }
